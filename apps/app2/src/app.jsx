@@ -5,7 +5,7 @@ export function App() {
 
   return (
     <div>
-      <h1>App 2</h1>
+      <h1>App 2!!</h1>
       <button onClick={() => setCount(count + 1)}>Count {count}</button>
     </div>
   )

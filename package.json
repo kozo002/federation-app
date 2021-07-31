@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:app1": "npm start --prefix apps/app1",
-    "start:app2": "npm start --prefix apps/app2"
+    "start:app2": "npm start --prefix apps/app2",
+    "start": "npm run start:app1 & npm run start:app2"
   },
   "author": "Kozo Yamagata",
   "license": "ISC",
   "devDependencies": {
+    "serve": "^12.0.0",
     "webpack": "^5.47.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
