@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { ModuleFederationPlugin } = require('webpack').container
 
 module.exports = {
-  entry: './src/index',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: 'http://localhost:3001/'
@@ -27,10 +27,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'app',
       library: { type: 'var', name: 'app1' },
-      filename: 'app1.js',
       remotes: {
-        // app2: 'app2@http://localhost:3002/remoteEntry.js'
-        app2: 'app2'
+        app2: 'app2',
+        app3: 'app3'
       },
       shared: ['react', 'react-dom']
     }),
